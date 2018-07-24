@@ -6,7 +6,6 @@
 
   static propTypes = {
     className: PropTypes.string,
-    placeholder: PropTypes.string,
     items: PropTypes.array,
     template: PropTypes.func,
     native: PropTypes.bool,
@@ -14,8 +13,7 @@
 
   static defaultProps = {
     items: [],
-    native: true,
-    placeholder: '请选择'
+    native: true
   };
   
 ```

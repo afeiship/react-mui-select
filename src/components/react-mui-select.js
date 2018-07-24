@@ -9,7 +9,6 @@ export default class extends Component{
   /*===properties start===*/
   static propTypes = {
     className: PropTypes.string,
-    placeholder: PropTypes.string,
     items: PropTypes.array,
     template: PropTypes.func,
     native: PropTypes.bool,
@@ -17,8 +16,7 @@ export default class extends Component{
 
   static defaultProps = {
     items: [],
-    native: true,
-    placeholder: '请选择'
+    native: true
   };
   /*===properties end===*/
 
