@@ -7,13 +7,10 @@
   static propTypes = {
     className: PropTypes.string,
     items: PropTypes.array,
-    template: PropTypes.func,
-    native: PropTypes.bool,
   };
 
   static defaultProps = {
-    items: [],
-    native: true
+    items: []
   };
   
 ```
@@ -44,7 +41,7 @@ $react-mui-select-options:(
 
 class App extends React.Component {
   state = {
-    v1: 'op1',
+    v1: 'op2',
     items: [
       {
         value: 'op1',
@@ -70,9 +67,9 @@ class App extends React.Component {
     window.rc = this.refs.rc;
   }
 
-  handleChange = name => event => {
+  handleChange = event => {
     console.log(event.target.value);
-    this.setState({ [name]: event.target.value });
+    this.setState({ v1: event.target.value })
   };
 
   render() {
@@ -81,8 +78,7 @@ class App extends React.Component {
         <div>
           <ReactMuiSelect
             value={this.state.v1}
-            onChange={this.handleChange('v1')}
-            inputProps={{ name: 'v1' }}
+            onChange={this.handleChange}
             style={{ width: 200 }} items={this.state.items} ref='rc' />
         </div>
       </div>
