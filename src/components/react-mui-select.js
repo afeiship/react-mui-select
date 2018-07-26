@@ -36,7 +36,6 @@ export default class extends Component {
     return (
       <Select
         onChange={this._onChange}
-        native={native}
         className={classNames('react-mui-select', className)}
         {...props}
       >
